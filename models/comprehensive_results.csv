@@ -1,0 +1,15 @@
+Phase,Condition,Split,Train,Val,Val Acc,Precision,Recall,F1,TN/FP/FN/TP,CASIA Transfer,CalliBench Transfer
+Original,A (Isolated),80/20,391,98,0.6122,0.5595,0.9792,0.7121,13/37/1/47,0.3428,1.0
+Original,B (Contextual),80/20,228,58,0.9138,0.9062,0.9355,0.9206,24/3/2/29,0.2663,0.0526
+Split Window,A (Isolated),50/50,244,245,0.6448979591836734,-,-,-,-,-,-
+Split Window,A (Isolated),60/40,293,196,0.6020408163265306,-,-,-,-,-,-
+Split Window,A (Isolated),70/30,342,147,0.673469387755102,-,-,-,-,-,-
+Split Window,A (Isolated),80/19,391,98,0.7346938775510204,-,-,-,-,-,-
+Split Window,A (Isolated),90/9,440,49,0.8163265306122449,-,-,-,-,-,-
+Split Window,B (Contextual),50/50,143,143,0.9300699300699301,-,-,-,-,-,-
+Split Window,B (Contextual),60/40,171,115,0.9565217391304348,-,-,-,-,-,-
+Split Window,B (Contextual),70/30,200,86,0.9418604651162791,-,-,-,-,-,-
+Split Window,B (Contextual),80/19,228,58,0.9482758620689655,-,-,-,-,-,-
+Split Window,B (Contextual),90/9,257,29,1.0,-,-,-,-,-,-
+Optimized,A (Isolated),90%/10%,440,49,0.6939,0.5925925925925926,0.8,0.6808510638297872,18/11/4/16,0.6949,0.9474
+Optimized,B (Contextual),60%/40%,171,115,0.9565,0.9666666666666667,0.9508196721311475,0.9586776859504132,52/2/3/58,0.9831,0.0526

@@ -1,0 +1,40 @@
+{
+  "condition_a": {
+    "split": "90%/10%",
+    "train_size": 440,
+    "val_size": 49,
+    "val_best_acc": 0.6939,
+    "val_results": {
+      "accuracy": 0.6939,
+      "tp": 16,
+      "tn": 18,
+      "fp": 11,
+      "fn": 4
+    },
+    "casia_transfer": {
+      "accuracy": 0.6949
+    },
+    "callibench_transfer": {
+      "accuracy": 0.9474
+    }
+  },
+  "condition_b": {
+    "split": "60%/40%",
+    "train_size": 171,
+    "val_size": 115,
+    "val_best_acc": 0.9565,
+    "val_results": {
+      "accuracy": 0.9565,
+      "tp": 58,
+      "tn": 52,
+      "fp": 2,
+      "fn": 3
+    },
+    "casia_transfer": {
+      "accuracy": 0.9831
+    },
+    "callibench_transfer": {
+      "accuracy": 0.0526
+    }
+  }
+}

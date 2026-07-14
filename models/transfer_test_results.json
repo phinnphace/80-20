@@ -1,0 +1,40 @@
+{
+  "condition_a": {
+    "accuracy": 0.34277620396600567,
+    "da_accuracy": 0.9152542372881356,
+    "other_accuracy": 0.22789115646258504,
+    "tn": 67,
+    "fp": 227,
+    "fn": 5,
+    "tp": 54,
+    "total_samples": 353,
+    "total_errors": 232,
+    "error_by_char": {
+      "\u625b (true=0, pred=1)": 52,
+      "\u6263 (true=0, pred=1)": 51,
+      "\u6254 (true=0, pred=1)": 37,
+      "\u626b (true=0, pred=1)": 48,
+      "\u6258 (true=0, pred=1)": 39,
+      "\u6253 (true=1, pred=0)": 5
+    }
+  },
+  "condition_b": {
+    "accuracy": 0.26628895184135976,
+    "da_accuracy": 0.9830508474576272,
+    "other_accuracy": 0.12244897959183673,
+    "tn": 36,
+    "fp": 258,
+    "fn": 1,
+    "tp": 58,
+    "total_samples": 353,
+    "total_errors": 259,
+    "error_by_char": {
+      "\u625b (true=0, pred=1)": 56,
+      "\u6263 (true=0, pred=1)": 56,
+      "\u6254 (true=0, pred=1)": 48,
+      "\u626b (true=0, pred=1)": 52,
+      "\u6258 (true=0, pred=1)": 46,
+      "\u6253 (true=1, pred=0)": 1
+    }
+  }
+}

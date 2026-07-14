@@ -1,0 +1,6 @@
+Metric,Value,Interpretation
+Structural Difference,0.3363,Substantially different (>0.2 threshold)
+Cond A Error Rate,0.3878,38.8% misclassified; heavily biased toward FP
+Cond B Error Rate,0.0862,8.6% misclassified; balanced errors
+Cond A FP/FN Ratio,37.0,"37 false positives, 1 false negative"
+Cond B FP/FN Ratio,1.5,"3 false positives, 2 false negatives"

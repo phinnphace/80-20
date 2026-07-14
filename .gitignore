@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+*_env/
+casia_env/
+casia_env_clean/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Models (large files — users download from HuggingFace)
+*.pth
+*.pt
+*.safetensors
+*.bin
+!models/*.json
+
+# Data (large — users download from sources)
+data/condition_a/
+data/condition_b/
+data/isolated/
+data/contextual/
+data/manual_fixes/
+data/light_inspection/
+data/callireader_test/
+callibench_da/
+
+# Cache
+.cache/
+*.cache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Conda
+miniconda3/
+anaconda3/
+
+# HuggingFace cache
+huggingface/
+
+# Side quest outputs (keep JSONs, exclude CSVs from split experiments)
+side_quests/*.csv
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Environment
+.env

@@ -1,0 +1,4 @@
+Model,Parameters,Pretrained,Cond_A_Acc,Cond_B_Acc,Key_Finding
+CNN (Isolated),"92,930",No,0.6122,,Struggles without context; generalizes to calligraphy
+CNN (Contextual),"92,930",No,,0.9138,Context improves in-distribution; fails on calligraphy
+ResNet-18,"11,177,538",ImageNet,1.0,1.0,Pretraining dissolves the context gap entirely

@@ -1,0 +1,8 @@
+Metric,Value,Interpretation
+Structural Difference,0.3363,Substantially different error structures (>0.2 threshold)
+Cond A Error Rate,0.3878,38.8% of validation samples misclassified
+Cond B Error Rate,0.0862,8.6% of validation samples misclassified
+Cond A FP/FN Ratio,37.0,"Heavily biased toward false positives (37 FP, 1 FN)"
+Cond B FP/FN Ratio,1.5,"Balanced errors (3 FP, 2 FN)"
+Cond A Positive Prediction Rate,0.8571,Model predicts 打 85.7% of the time
+Cond B Positive Prediction Rate,0.5517,Model predicts 打 55.2% of the time (near true rate of 53.4%)
