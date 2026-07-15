@@ -1,0 +1,8 @@
+streamlit>=1.28
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+torch>=2.0
+torchvision>=0.15
+Pillow>=10.0
+datasets>=2.14
