@@ -368,22 +368,49 @@ function AskSlide() {
 function ClosingSlide() {
   return (
     <div style={{
-      background: DARK, color: "#fff", padding: "64px 48px",
-      textAlign: "center", minHeight: 300,
+      background: DARK, color: "#fff", padding: "40px 48px",
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+      minHeight: 300, textAlign: "center"
     }}>
       <h2 style={{ color: "#fff", fontSize: 28, fontWeight: 800, margin: "0 0 12px" }}>Simple, not easy.</h2>
-      <p style={{ color: "#cbd5e1", fontSize: 15, margin: "0 0 32px", lineHeight: 1.6 }}>
-        We don't need a breakthrough.<br />
-        We need to look at what we already have.
+      <p style={{ color: "#cbd5e1", fontSize: 15, margin: "0 0 16px", lineHeight: 1.6 }}>
+        We don't need a breakthrough. We need to look at what we already have.
       </p>
-      <p style={{ color: "#fff", fontSize: 22, fontWeight: 700, fontStyle: "italic", margin: "0 0 32px", lineHeight: 1.4 }}>
-        The unexamined default<br />is not worth inheriting.
+      <p style={{ color: "#fff", fontSize: 18, fontWeight: 700, fontStyle: "italic", margin: "0 0 24px", lineHeight: 1.4 }}>
+        The unexamined default is not worth inheriting.
       </p>
-      <p style={{ color: MUTED, fontSize: 13, margin: 0 }}>
-        Phinn Markson<br />
-        <span style={{ color: "#60a5fa" }}>markson.2@osu.edu</span> | <span style={{ color: "#60a5fa" }}>dataacorns.com</span>
-      </p>
+
+      {/* Acknowledgments & Citation */}
+      <div style={{ background: "rgba(255,255,255,0.05)", padding: "20px", borderRadius: "8px", width: "100%", maxWidth: "700px", textAlign: "left", fontSize: 12, color: "#cbd5e1", lineHeight: 1.5 }}>
+        <p style={{ margin: "0 0 8px", fontWeight: 600, color: "#fff" }}>Acknowledgments & Citations</p>
+        <p style={{ margin: "0 0 8px" }}>
+          Thank you to my program at The Ohio State University for giving me the tools to do projects like this. Projects that are side quests of other projects. Thank you to the God of my understanding who pushes me to get work out that is timely rather than my idea of perfect. 
+        </p>
+        <p style={{ margin: "0 0 8px" }}>
+          A heartfelt gratitude to the team of CalliReader (Yuxuan Luo, Jiaqi Tang, Chenyi Huang, Feiyang Hao, Zhouhui Lian). I have only dipped my toes in these waters and am amazed at their work. I am very grateful for their massive contribution to us all. Thank you!!
+        </p>
+        <p style={{ margin: "0 0 8px" }}>
+          <a href="https://arxiv.org/abs/2503.06472" target="_blank" rel="noreferrer" style={{ color: "#60a5fa", textDecoration: "none" }}>Original CalliReader Paper (arXiv:2503.06472)</a>
+        </p>
+        <pre style={{ background: "rgba(0,0,0,0.3)", padding: "10px", borderRadius: "4px", fontSize: 10, color: MUTED, margin: 0, overflowX: "auto", fontFamily: "monospace" }}>
+{`@InProceedings{Luo_2025_ICCV,
+    author    = {Luo, Yuxuan and Tang, Jiaqi and Huang, Chenyi and Hao, Feiyang and Lian, Zhouhui},
+    title     = {CalliReader: Contextualizing Chinese Calligraphy via an Embedding-Aligned Vision-Language Model},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October}, year = {2025}, pages = {23030-23040}
+}`}
+        </pre>
+      </div>
+
+      <div style={{ marginTop: 24, display: "flex", width: "100%", justifyContent: "space-between", alignItems: "flex-end" }}>
+        <p style={{ color: MUTED, fontSize: 12, margin: 0, fontStyle: "italic" }}>
+          More from me soonish
+        </p>
+        <p style={{ color: MUTED, fontSize: 13, margin: 0, textAlign: "right" }}>
+          Phinn Markson<br />
+          <span style={{ color: "#60a5fa" }}>markson.2@osu.edu</span> | <span style={{ color: "#60a5fa" }}>dataacorns.com</span>
+        </p>
+      </div>
     </div>
   );
 }
@@ -434,7 +461,7 @@ At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 6
 
 All true. All incomplete. The split ratio — a choice most researchers make without examining it — determined which truth you'd find.
 
-One thing the split can't fix: calligraphy transfer. Condition B never exceeds 15.8% on CalliBench at any split. That's not a split artifact. That's a genuine domain gap. And that distinction matters — the split ratio audit is how you tell artifact from finding. Without it, you can't tell which of your conclusions are real and which are inherited from a default nobody tested. Even this intermediate finding is conclusive of anything, it is only a sign post for further exploration within this study context.`,
+  One thing the split can't fix: calligraphy transfer. Condition B never exceeds 15.8% on CalliBench at any split. That's not a split artifact. That's a genuine domain gap. And that distinction matters — the split ratio audit is how you tell artifact from finding. Without it, you can't tell which of your conclusions are real and which are inherited from a default nobody tested. Even this intermediate finding is not conclusive of anything, it is only a sign post for further exploration within this study context.`,
 
   // Slide 8: The Loop
   `We are naming the system so we can get to solutions. The circularity is the feature, not a bug someone introduced.
@@ -471,7 +498,8 @@ The ask is small. Test the split ratio — five runs, same seed, one afternoon. 
   // Slide 12: Closing
   `We don't need a breakthrough. We don't need a new framework, a new paradigm, a new model architecture. We need to look at what we already have. That's the turn. The unexamined default is not worth inheriting.
 
-I keep building audit tools not because I think a linter can fix an industry but simply, this is easy.`,
+I keep building audit tools not because I think a linter can fix an industry. 
+But simply, looking differently at something is.  easy.'
 ];
 
 const slideComponents = [
