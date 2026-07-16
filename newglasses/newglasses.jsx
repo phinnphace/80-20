@@ -390,36 +390,36 @@ function ClosingSlide() {
 
 const notes = [
   // Slide 1: Title
-  `The current conversation about AI and compute goes like this: we need more data centers, more energy, more GPUs, more data, more training, more parameters, more. The assumption underneath is t[...]
+  `The current conversation about AI and compute goes like this: we need more data centers, more energy, more GPUs, more data, more training, more parameters, more. The assumption underneath is that t[...]
 
   // Slide 2: Cartoon
-  `I don't know how you grew up but saying things such as "I'm bored", or "I don't know what to do" did not end well. What I failed to recognize as a kid is this thread… We don't have a scarcit[...]
+  `I don't know how you grew up but saying things such as "I'm bored", or "I don't know what to do" did not end well. What I failed to recognize as a kid is this thread… We don't have a scarcity pro[...]
 
   // Slide 3: The current conversation
-  `This is a side quest from a project so if it seems lacking full context I wanted to acknowledge that you are correct. Given the current environment and conversations happening, I do not hear t[...]
+  `This is a side quest from a project so if it seems lacking full context I wanted to acknowledge that you are correct. Given the current environment and conversations happening, I do not hear this o[...]
 
   // Slide 4: Allocation
   `I want to show you what I mean with one small example, and then I want to zoom out.`,
 
   // Slide 5: One small example
-  `No need to dwell on the Chinese characters — they're the vehicle for this story. In fact most of the technical jargon you do not need pay attention to, the "thing" is not the point. The poin[...]
+  `No need to dwell on the Chinese characters — they're the vehicle for this story. In fact most of the technical jargon you do not need pay attention to, the "thing" is not the point. The point is:[...]
 
-I trained two identical convolutional neural networks — tiny ones, 93K parameters each — on Chinese character recognition. Same architecture, same seed, same data. One trained on isolated cha[...]
+I trained two identical convolutional neural networks — tiny ones, 93K parameters each — on Chinese character recognition. Same architecture, same seed, same data. One trained on isolated characte[...]
 
 Paper-worthy finding. Publishable. Next project.`,
 
   // Slide 6: Then I tested the default
-  `This is the first receipt. 21 points of swing from a choice nobody tests. So I ran transfer tests — external data the model had never seen — and the story flipped. The isolated model, the [...]
+  `This is the first receipt. 21 points of swing from a choice nobody tests. So I ran transfer tests — external data the model had never seen — and the story flipped. The isolated model, the one t[...]
 
 Still not the finding.
 
-The finding came when I did something most papers don't: I tested the split ratio itself. That 80/20 split everyone uses — I ran the same experiment at 50/50, 60/40, 70/30, 80/20, and 90/10. Sa[...]
+The finding came when I did something most papers don't: I tested the split ratio itself. That 80/20 split everyone uses — I ran the same experiment at 50/50, 60/40, 70/30, 80/20, and 90/10. Same se[...]
 
 The results:
 
-Condition A swings 21.4 percentage points across splits. Condition B swings only 7. Same data, same model. Only the split changed. And when I ran transfer tests at each split, the conclusions did[...]
+Condition A swings 21.4 percentage points across splits. Condition B swings only 7. Same data, same model. Only the split changed. And when I ran transfer tests at each split, the conclusions didn't j[...]
 
-At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 60/40, Condition B's transfer to isolated handwriting (CASIA) was 98.3%. The contextual model transfers near-perfectly — our original conclusion that it "doesn't gene[...]
+At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 60/40, Condition B's transfer to isolated handwriting (CASIA) was 98.3%. The contextual model transfers near-perfect[...]
 
   // Slide 7: Three papers
   `You can write three defensible, contradictory papers from this one dataset depending on which split and which test metric you choose:
@@ -432,37 +432,37 @@ At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 6
 
 All true. All incomplete. The split ratio — a choice most researchers make without examining it — determined which truth you'd find.
 
-One thing the split can't fix: calligraphy transfer. Condition B never exceeds 15.8% on CalliBench at any split. That's not a split artifact. That's a genuine domain gap. And that distinction mat[...]
+One thing the split can't fix: calligraphy transfer. Condition B never exceeds 15.8% on CalliBench at any split. That's not a split artifact. That's a genuine domain gap. And that distinction matters [...]
 
   // Slide 8: The Loop
   `We are naming the system so we can get to solutions. The circularity is the feature, not a bug someone introduced.
 
 This is where it gets uncomfortable, because the split ratio isn't an isolated problem. It's one instance of a pattern: methodology mistakes its own preprocessing for discovery.
 
-The standard ML pipeline runs like this: collect data, preprocess it extensively, split it (80/20, because that's what we do), train a model, report internal validation as results. The model pass[...]
+The standard ML pipeline runs like this: collect data, preprocess it extensively, split it (80/20, because that's what we do), train a model, report internal validation as results. The model passes be[...]
 
-But it gets published. And because it got published, the methodology gets repeated. And because the methodology gets repeated, it produces more results of the same kind, which get published, whic[...]
+But it gets published. And because it got published, the methodology gets repeated. And because the methodology gets repeated, it produces more results of the same kind, which get published, which val[...]
 
-The downstream effects compound. Conclusions from internally validated models inform policy decisions. Policy decisions drive resource allocation. Resource allocation drives demand for more compu[...]
+The downstream effects compound. Conclusions from internally validated models inform policy decisions. Policy decisions drive resource allocation. Resource allocation drives demand for more compute, m[...]
 
-Nobody in this loop is acting in bad faith. That's what makes it sticky. Everyone is following best practices — because best practices are what everyone follows. The 80/20 split is standard bec[...]
+Nobody in this loop is acting in bad faith. That's what makes it sticky. Everyone is following best practices — because best practices are what everyone follows. The 80/20 split is standard because [...]
 
   // Slide 9: Portfolio
   `I keep building the same thing in different domains because the pattern keeps showing up. I did not intend on this. I need to name it.
 
-Four tools, four layers, one principle. And now the split ratio work. Same principle, different layer. The methodology itself contains unexamined defaults that determine your conclusions before y[...]
+Four tools, four layers, one principle. And now the split ratio work. Same principle, different layer. The methodology itself contains unexamined defaults that determine your conclusions before you ru[...]
 
-Each of these tools does the same thing: looks at what's already there before reaching for more. Each audit costs essentially nothing. Nobody gives anything up. Nobody's workflow degrades. The on[...]
+Each of these tools does the same thing: looks at what's already there before reaching for more. Each audit costs essentially nothing. Nobody gives anything up. Nobody's workflow degrades. The only th[...]
 
   // Slide 10: Question
   null, // No notes — just the slide
 
   // Slide 11: The ask is small
-  `We talk about the AI energy crisis as though it's a supply problem. Build more data centers. Source more power. Scale more infrastructure. The assumption is that the demand is legitimate — a[...]
+  `We talk about the AI energy crisis as though it's a supply problem. Build more data centers. Source more power. Scale more infrastructure. The assumption is that the demand is legitimate — that a[...]
 
-But how much of that demand is downstream of conclusions that were artifacts of unexamined defaults? How many models were trained on data that silently degraded during geographic transformation? [...]
+But how much of that demand is downstream of conclusions that were artifacts of unexamined defaults? How many models were trained on data that silently degraded during geographic transformation? How m[...]
 
-I can't quantify the total. Nobody can — that's part of the problem. The waste is invisible because it's composed of things that look like results. A model that reports 91.4% accuracy looks lik[...]
+I can't quantify the total. Nobody can — that's part of the problem. The waste is invisible because it's composed of things that look like results. A model that reports 91.4% accuracy looks like it [...]
 
 The ask is small. Test the split ratio — five runs, same seed, one afternoon. Transfer test on external data. Audit your geographic transformations. Check your code against your hardware before you [...]
 
@@ -568,7 +568,7 @@ export default function NewGlasses() {
             NEW GLASSES
           </span>
           <span style={{ fontSize: 12, color: MUTED }}>
-            {mode === "read" ? "Reading mode" : `Slide ${activeSlide + 1} of ${slideComponents.length}`} 
+            {mode === "read" ? "Reading mode" : `Slide ${activeSlide + 1} of ${slideComponents.length}`}
           </span>
         </div>
         <div className="controls">
@@ -623,7 +623,7 @@ export default function NewGlasses() {
           <div>
             <section className="slide-unit" style={{ marginBottom: 24 }}>
               <div className="slide-panel">
-                {(() => { const C = slideComponents[activeSlide]; return <C />; })()}
+                <SlideComp />
               </div>
               {notes[activeSlide] && (
                 <div className="slide-notes" style={{ padding: "24px 8px 0" }}>
