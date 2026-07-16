@@ -27,7 +27,7 @@ function TitleSlide() {
       display: "flex", flexDirection: "column", alignItems: "center",
       justifyContent: "center", minHeight: 340, textAlign: "center",
     }}>
-      <h1 style={{ fontSize: 36, fontWeight: 800, lineHeight: 1.15, margin: 0, letterSpacing: "-0.02em" }}>
+      <h1 style={{ color: "#fff", fontSize: 36, fontWeight: 800, lineHeight: 1.15, margin: 0, letterSpacing: "-0.02em" }}>
         We Don't Need More.<br />We Need to Look.
       </h1>
       <p style={{ color: MUTED, fontSize: 15, marginTop: 28, fontStyle: "italic", margin: "28px 0 0" }}>
@@ -89,7 +89,7 @@ function AllocationSlide() {
       textAlign: "center", minHeight: 300,
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
     }}>
-      <h2 style={{ fontSize: 32, fontWeight: 800, margin: 0 }}>
+      <h2 style={{ color: "#fff", fontSize: 32, fontWeight: 800, margin: 0 }}>
         The problem is not scarcity.<br />It's allocation.
       </h2>
       <div style={{ marginTop: 32 }}>
@@ -195,7 +195,7 @@ function ThreePapersSlide() {
   });
   return (
     <div style={{ background: DARK, color: "#fff", padding: "44px 48px", minHeight: 320 }}>
-      <h2 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 24px" }}>
+      <h2 style={{ color: "#fff", fontSize: 28, fontWeight: 800, margin: "0 0 24px" }}>
         Three papers. One dataset.
       </h2>
       <div style={findingStyle("rgba(255,255,255,0.06)")}>
@@ -320,7 +320,7 @@ function QuestionSlide() {
       textAlign: "center", minHeight: 300,
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
     }}>
-      <h2 style={{ fontSize: 28, fontWeight: 800, margin: 0, lineHeight: 1.35 }}>
+      <h2 style={{ color: "#fff", fontSize: 28, fontWeight: 800, margin: 0, lineHeight: 1.35 }}>
         How much of the demand for<br />
         "more" is downstream of<br />
         conclusions that were artifacts<br />
@@ -372,12 +372,12 @@ function ClosingSlide() {
       textAlign: "center", minHeight: 300,
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
     }}>
-      <h2 style={{ fontSize: 28, fontWeight: 800, margin: "0 0 12px" }}>Simple, not easy.</h2>
+      <h2 style={{ color: "#fff", fontSize: 28, fontWeight: 800, margin: "0 0 12px" }}>Simple, not easy.</h2>
       <p style={{ color: "#cbd5e1", fontSize: 15, margin: "0 0 32px", lineHeight: 1.6 }}>
         We don't need a breakthrough.<br />
         We need to look at what we already have.
       </p>
-      <p style={{ fontSize: 22, fontWeight: 700, fontStyle: "italic", margin: "0 0 32px", lineHeight: 1.4 }}>
+      <p style={{ color: "#fff", fontSize: 22, fontWeight: 700, fontStyle: "italic", margin: "0 0 32px", lineHeight: 1.4 }}>
         The unexamined default<br />is not worth inheriting.
       </p>
       <p style={{ color: MUTED, fontSize: 13, margin: 0 }}>
