@@ -499,7 +499,7 @@ The ask is small. Test the split ratio — five runs, same seed, one afternoon. 
   `We don't need a breakthrough. We don't need a new framework, a new paradigm, a new model architecture. We need to look at what we already have. That's the turn. The unexamined default is not worth inheriting.
 
 I keep building audit tools not because I think a linter can fix an industry. 
-But simply, looking differently at something is.  easy.'
+But simply, looking differently at something is easy.`
 ];
 
 const slideComponents = [
