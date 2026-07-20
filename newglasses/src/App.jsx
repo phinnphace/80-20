@@ -10,6 +10,15 @@ const AMBER = "#d97706";
 const MUTED = "#94a3b8";
 const LIGHT_PANEL = "#f1f5f9";
 
+/* ─────────────────────────────────────────────────────────────
+   NOTES APPEARANCE — edit these two values to taste, one place.
+   NOTES_TEXT  = the color of the speaker-notes prose
+   NOTES_BG    = the panel behind the notes (set to "transparent"
+                 if you want notes to sit directly on the page)
+   ───────────────────────────────────────────────────────────── */
+const NOTES_TEXT = "#e8edf4";   // soft white — comfortable, clearly readable
+const NOTES_BG   = "#232838";   // subtle dark backing so notes stay legible
+
 const chartData = [
   { split: "50/50", condA: 64.5, condB: 93 },
   { split: "60/40", condA: 60.2, condB: 95.7 },
@@ -415,7 +424,11 @@ function ClosingSlide() {
   );
 }
 
-/* ───────── Notes content ───────── */
+/* ─────────────────────────────────────────────────────────────
+   SPEAKER NOTES
+   One entry per slide, in deck order. Edit the text freely —
+   nothing here affects layout. Use null for a slide with no notes.
+   ───────────────────────────────────────────────────────────── */
 
 const notes = [
   // Slide 1: Title
@@ -424,18 +437,22 @@ const notes = [
   // Slide 2: Cartoon
   `I don't know how you grew up but saying things such as "I'm bored", or "I don't know what to do" did not end well. What I failed to recognize as a kid is this thread… We don't have a scarcity problem. We have an allocation problem. We have plenty. We just keep reaching for more instead of examining what's already here.`,
 
-  // Slide 3: The current conversation
-  `This is a side quest from a project so if it seems lacking full context I wanted to acknowledge that you are correct. Given the current environment and conversations happening, I do not hear this one being had and I wanted to add this in hopes it would become part of our conversation and beyond.`,
+  // Slide 3: The current conversation (the "More." list)
+  `This is a side quest from a project so if it seems lacking full context I wanted to acknowledge that you are correct. Given the current environment and conversations happening, I do not hear this topic and I wanted to add this in hopes it would become part of our conversation and beyond.`,
 
   // Slide 4: Allocation
-  `I want to show you what I mean with one small example, and then I want to zoom out.`,
+  `I want to show you what I mean with one example, and then I want to zoom out.
+
+This side quest is a branch of a larger project that came about from another project. Last semester I had a final training vision models (VM) that raised my hackles for many reasons. Out of that I had an idea about Chinese characters and elasticity. In doing initial background research of my idea I found out I was not insane, another team was doing something analogous which is great (not being insane, yet). I began building the framework and protocols for this project, using an assay I developed from my previous "hackles raised" project. I settled on a Chinese Bigram, which is a character of two parts. I chose the radical 手丁 (shǒu and dīng). The context here is so the next bit is not a hard left as we get a bit technical and jargon heavy.`,
 
   // Slide 5: One small example
-  `No need to dwell on the Chinese characters — they're the vehicle for this story. In fact most of the technical jargon you do not need pay attention to, the "thing" is not the point. The point is: internal validation is a tautology. The model passed its own exam. Of course it did.
+  `No need to get hung up on these technical details if this is not your jam. This is meant to be buffet style — take what you need and leave the rest as we say. In fact most of the technical jargon you do not need pay attention to, the "thing" is not the point. The point is: internal validation is a self fulfilling feedback loop.
 
-I trained two identical convolutional neural networks — tiny ones, 93K parameters each — on Chinese character recognition. Same architecture, same seed, same data. One trained on isolated characters (Condition A), one on characters in natural handwriting context (Condition B). Standard setup, standard 80/20 train/validation split. The contextual model won by 30 points on internal validation: 91.4% vs. 61.2%.
+The model passed its own exam. Of course it did. I trained two identical convolutional neural networks — tiny ones, 93K parameters each — on Chinese character recognition. Same architecture, same seed, same data. One trained on isolated characters (Condition A), one on characters in natural handwriting context (Condition B). Standard setup, standard 80/20 train/validation split. The contextual model won by 30 points on internal validation: 91.4% vs. 61.2%.
 
-Paper-worthy finding. Publishable. Next project.`,
+Paper-worthy finding. Publishable. Next project.
+
+But I didn't stop, because internal validation is not a result. It's a checkpoint. At best. It tells you the model learned what you preprocessed it to learn — which of course it did. You cleaned the data, you curated the splits, you controlled the conditions. The model passed its own exam. That's not a finding; that's a redundancy.`,
 
   // Slide 6: Then I tested the default
   `This is the first receipt. 21 points of swing from a choice nobody tests. So I ran transfer tests — external data the model had never seen — and the story flipped. The isolated model, the one that "lost" internal validation, generalized perfectly to calligraphy (100%). The contextual model, the one that "won," failed almost completely (5.3%). Internal validation told one story. The world told another.
@@ -443,6 +460,8 @@ Paper-worthy finding. Publishable. Next project.`,
 Still not the finding.
 
 The finding came when I did something most papers don't: I tested the split ratio itself. That 80/20 split everyone uses — I ran the same experiment at 50/50, 60/40, 70/30, 80/20, and 90/10. Same seed, same hyperparameters, same data. Only the split changed.
+
+Holding all else constant is standard scientific practice in order to determine effect. For instance, if you are baking a recipe and want to figure out if you can tell the difference between real sugar and sugar substitutes, if you change more than just the thing you want to know about you cannot reliably be sure that your result (your baked good) is giving you evidence of this. Maybe it is the synergy of A + B? It is imperative to hold everything constant and when one cannot we document this and account for it.
 
 The results:
 
@@ -461,7 +480,7 @@ At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 6
 
 All true. All incomplete. The split ratio — a choice most researchers make without examining it — determined which truth you'd find.
 
-  One thing the split can't fix: calligraphy transfer. Condition B never exceeds 15.8% on CalliBench at any split. That's not a split artifact. That's a genuine domain gap. And that distinction matters — the split ratio audit is how you tell artifact from finding. Without it, you can't tell which of your conclusions are real and which are inherited from a default nobody tested. Even this intermediate finding is not conclusive of anything, it is only a sign post for further exploration within this study context.`,
+One thing the split can't fix: calligraphy transfer. Condition B never exceeds 15.8% on CalliBench at any split. That's not a split artifact. That's a genuine domain gap. And that distinction matters — the split ratio audit is how you tell artifact from finding. Without it, you can't tell which of your conclusions are real and which are inherited from a default nobody tested. Even this intermediate finding is not conclusive of anything, it is only a sign post for further exploration within this study context.`,
 
   // Slide 8: The Loop
   `We are naming the system so we can get to solutions. The circularity is the feature, not a bug someone introduced.
@@ -487,19 +506,16 @@ Each of these tools does the same thing: looks at what's already there before re
   null, // No notes — just the slide
 
   // Slide 11: The ask is small
-  `We talk about the AI energy crisis as though it's a supply problem. Build more data centers. Source more power. Scale more infrastructure. The assumption is that the demand is legitimate — that all this compute is producing proportional value, and we simply need more capacity to meet it.
+  `But how much of that demand is downstream of conclusions that were artifacts of unexamined defaults? How many models were trained on data that silently degraded during geographic transformation? How many GPUs idled because the code couldn't address them? How many papers reported results that would flip if the split ratio changed?
 
-But how much of that demand is downstream of conclusions that were artifacts of unexamined defaults? How many models were trained on data that silently degraded during geographic transformation? How many GPUs idled because the code couldn't address them? How many papers reported results that would flip if the split ratio changed?
+I can't quantify the total. Nobody can — that's part of the problem. The waste is invisible because it's composed of things that look like results. A model that reports 91.4% accuracy looks like it works. A paper that gets published looks like it's been validated. A policy informed by that paper looks like it's evidence-based. None of these things are false. They're just not examined. "Data-driven decisions" are data driven but that implies something that is taken to mean things it does not regarding its validity.
 
-I can't quantify the total. Nobody can — that's part of the problem. The waste is invisible because it's composed of things that look like results. A model that reports 91.4% accuracy looks like it works. A paper that gets published looks like it's been validated. A policy informed by that paper looks like it's evidence-based. None of these things are false. They're just not examined.
-
-The ask is small. Test the split ratio — five runs, same seed, one afternoon. Transfer test on external data. Audit your geographic transformations. Check your code against your hardware before you occupy it. These are not heroic acts. They're the equivalent of checking your mirrors before you change lanes. They cost nothing, they catch waste, and the only thing lost is heat that was never going to become work.`,
+The ask is small. Test the split ratio — five runs, same seed, one afternoon. Transfer test on external data. Audit your geographic transformations. Check your code against your hardware before you occupy it. These are not heroic acts. They're the equivalent of checking your mirrors before you change lanes. Or dare I say it; measure twice, cut once. They cost nothing, they catch waste, and the only thing lost is heat that was never going to become work. On the other side of this equation is what gets to stay in the system as resources. And that is what I hope to see, and what I hope you begin to see as well.`,
 
   // Slide 12: Closing
   `We don't need a breakthrough. We don't need a new framework, a new paradigm, a new model architecture. We need to look at what we already have. That's the turn. The unexamined default is not worth inheriting.
 
-I keep building audit tools not because I think a linter can fix an industry. 
-But simply, looking differently at something is easy.`
+I keep building audit tools not because I think a linter can fix an industry but simply, the solution to many seemingly disparate crises is not in addition; we do not need more, we need to look and use what we have skillfully, intentionally and with awareness.`
 ];
 
 const slideComponents = [
@@ -527,8 +543,14 @@ export default function NewGlasses() {
           font-family: 'Source Serif 4', Georgia, serif;
           font-size: 15.5px;
           line-height: 1.72;
-          color: #334155;
+          color: ${NOTES_TEXT};
           white-space: pre-line;
+        }
+
+        .slide-notes {
+          background: ${NOTES_BG};
+          border-radius: 6px;
+          margin-top: 12px;
         }
 
         .slide-panel {
@@ -581,6 +603,10 @@ export default function NewGlasses() {
           }
           .slide-notes {
             page-break-inside: auto;
+            background: #fff !important;
+          }
+          .notes-text {
+            color: #1a1a1a !important;
           }
           body { margin: 0; }
         }
@@ -642,7 +668,7 @@ export default function NewGlasses() {
                 <SlideComp />
               </div>
               {notes[i] && (
-                <div className="slide-notes" style={{ padding: "24px 8px 0" }}>
+                <div className="slide-notes" style={{ padding: "24px" }}>
                   <div className="notes-text">{notes[i]}</div>
                 </div>
               )}
@@ -656,7 +682,7 @@ export default function NewGlasses() {
                 {(() => { const C = slideComponents[activeSlide]; return <C />; })()}
               </div>
               {notes[activeSlide] && (
-                <div className="slide-notes" style={{ padding: "24px 8px 0" }}>
+                <div className="slide-notes" style={{ padding: "24px" }}>
                   <div className="notes-text">{notes[activeSlide]}</div>
                 </div>
               )}
