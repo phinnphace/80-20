@@ -48,3 +48,5 @@ side_quests/light_inspection/
 new*.txt
 diagnostic2.py
 inspect.data.py
+*:Zone.Identifier
+*Zone.Identifier*
