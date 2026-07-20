@@ -442,18 +442,19 @@ function ClosingSlide() {
 
 const notes = [
   // Slide 1: Title
-  `The current conversation about AI and compute goes like this: we need more data centers, more energy, more GPUs, more data, more training, more parameters, more. The assumption underneath is that the problem is scarcity and the solution is scale. I think the assumption is wrong.`,
+  `The current conversation about AI and compute goes like this: we need more data centers, more energy, more GPUs, more data, more training, more parameters, more. The assumption underneath is that the problem is scarcity and the solution is scale. I think the assumption is unexamined.`,
 
   // Slide 2: Cartoon
-  `I don't know how you grew up but saying things such as "I'm bored", or "I don't know what to do" did not end well. What I failed to recognize as a kid is this thread… We don't have a scarcity problem. We have an allocation problem. We have plenty. We just keep reaching for more instead of examining what's already here.`,
+  ` I don’t know how you grew up, but saying things such as “I’m bored”, or “I don’t know what to do”, did not end well for me. What I did not understand as a child or far longer is that what seems to be a scarcity problem is not at all the case. Instead, perhaps simply, we have an allocation misalignment. . We have plenty. We just keep reaching for more instead of examining what's already here.`,
 
   // Slide 3: The current conversation (the "More." list)
-  `This is a side quest from a project so if it seems lacking full context I wanted to acknowledge that you are correct. Given the current environment and conversations happening, I do not hear this topic and I wanted to add this in hopes it would become part of our conversation and beyond.`,
+  ` This is a side quest from a project so if it seems lacking full context I wanted to acknowledge that you are correct. Given the current environment and conversations happening, I’m not hearing this topic and I wanted to add this in hopes it would become part of our conversation and beyond.`,
 
   // Slide 4: Allocation
   `I want to show you what I mean with one example, and then I want to zoom out.
 
-This side quest is a branch of a larger project that came about from another project. Last semester I had a final training vision models (VM) that raised my hackles for many reasons. Out of that I had an idea about Chinese characters and elasticity. In doing initial background research of my idea I found out I was not insane, another team was doing something analogous which is great (not being insane, yet). I began building the framework and protocols for this project, using an assay I developed from my previous "hackles raised" project. I settled on a Chinese Bigram, which is a character of two parts. I chose the radical 手丁 (shǒu and dīng). The context here is so the next bit is not a hard left as we get a bit technical and jargon heavy.`,
+ I want to show you what I mean with one example, and then I want to zoom out.
+This side quest is a branch of a larger project that sprung from my hackles being raised by last semester's final in one of my graduate courses. The technical component training a vision model (VM), a canonical dataset, and a notebook.   From here sprung a diagnostic assay for VM (decoder ring,) and an almost ready front end interactive site to go along with it, and subsequent work such as this. One idea about vision model training concerned Chinese characters and elasticity. In doing initial background research for this, I found out I was not insane, another team was doing something analogous which is great (not being insane, yet).  I began building the framework and protocols for this project.   I settled on a Chinese Bigram, which is a character of two parts. I chose the radical 手丁 (sho˘u and d¯ing).  The context here is so the next bit is not a hard left as we get a bit technical and jargon heavy. When you read “condition A”, and “condition B” I hope you can envision a character either alone or in context as this is all that it refers to.`,
 
   // Slide 5: One small example
   `No need to get hung up on these technical details if this is not your jam. This is meant to be buffet style — take what you need and leave the rest as we say. In fact most of the technical jargon you do not need pay attention to, the "thing" is not the point. The point is: internal validation is a self fulfilling feedback loop.
@@ -465,19 +466,18 @@ Paper-worthy finding. Publishable. Next project.
 But I didn't stop, because internal validation is not a result. It's a checkpoint. At best. It tells you the model learned what you preprocessed it to learn — which of course it did. You cleaned the data, you curated the splits, you controlled the conditions. The model passed its own exam. That's not a finding; that's a redundancy.`,
 
   // Slide 6: Then I tested the default
-  `This is the first receipt. 21 points of swing from a choice nobody tests. So I ran transfer tests — external data the model had never seen — and the story flipped. The isolated model, the one that "lost" internal validation, generalized perfectly to calligraphy (100%). The contextual model, the one that "won," failed almost completely (5.3%). Internal validation told one story. The world told another.
+  ` This is the first receipt. 21 points of swing from a choice nobody tests. So I ran transfer tests — external data the model had never seen — and the story flipped. The isolated model, the one that "lost" internal validation, generalized perfectly to calligraphy (100%). The contextual model, the one that "won," failed almost completely (5.3%). Internal validation told one story. The world told another.
 
 Still not the finding.
 
-The finding came when I did something most papers don't: I tested the split ratio itself. That 80/20 split everyone uses — I ran the same experiment at 50/50, 60/40, 70/30, 80/20, and 90/10. Same seed, same hyperparameters, same data. Only the split changed.
-
-Holding all else constant is standard scientific practice in order to determine effect. For instance, if you are baking a recipe and want to figure out if you can tell the difference between real sugar and sugar substitutes, if you change more than just the thing you want to know about you cannot reliably be sure that your result (your baked good) is giving you evidence of this. Maybe it is the synergy of A + B? It is imperative to hold everything constant and when one cannot we document this and account for it.
+The “finding“ came when I did something most studies don't: I tested the split ratio itself. That 80/20 split everyone uses — I ran the same experiment at 50/50, 60/40, 70/30, 80/20, and 90/10. Same seed, same hyperparameters, same data. Only the split changed.
+ 
+Holding all else constant is standard scientific practice in order to determine effect. For instance, If you are baking a recipe and and want to figure out if you can tell the difference between real sugar, and sugar substitutes, if you change more than just the thing you want to know about you cannot reliably be sure that your result ( your baked good) is giving you evidence of this. Maybe it is the synergy of A + B? It is imperative to hold everything constant and when one cannot we document this and account for it. 
 
 The results:
-
 Condition A swings 21.4 percentage points across splits. Condition B swings only 7. Same data, same model. Only the split changed. And when I ran transfer tests at each split, the conclusions didn't just shift — they contradicted each other:
 
-At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 60/40, it was 98.3%. The contextual model transfers near-perfectly — our original conclusion that it "doesn't generalize" was an artifact of the split we inherited without testing.`,
+At 80/20, Condition B's transfer to isolated handwriting (CASIA) was 26.6%. At 60/40, it was 98.3%. The contextual model transfers near-perfectly — our original conclusion that it "doesn't generalize" was an artifact of the split we inherited without testing. If this makes you uncomfortable, good. It should. `,
 
   // Slide 7: Three papers
   `You can write three defensible, contradictory papers from this one dataset depending on which split and which test metric you choose:
@@ -523,9 +523,9 @@ I can't quantify the total. Nobody can — that's part of the problem. The waste
 The ask is small. Test the split ratio — five runs, same seed, one afternoon. Transfer test on external data. Audit your geographic transformations. Check your code against your hardware before you occupy it. These are not heroic acts. They're the equivalent of checking your mirrors before you change lanes. Or dare I say it; measure twice, cut once. They cost nothing, they catch waste, and the only thing lost is heat that was never going to become work. On the other side of this equation is what gets to stay in the system as resources. And that is what I hope to see, and what I hope you begin to see as well.`,
 
   // Slide 12: Closing
-  `We don't need a breakthrough. We don't need a new framework, a new paradigm, a new model architecture. We need to look at what we already have. That's the turn. The unexamined default is not worth inheriting.
+  `I keep building audit tools not because I think a linter can fix an industry but simply, the solution to many seemingly disparate crises is not in addition; we do not need more, we need to look and use what we have skillfully, intentionally and with awareness.  
 
-I keep building audit tools not because I think a linter can fix an industry but simply, the solution to many seemingly disparate crises is not in addition; we do not need more, we need to look and use what we have skillfully, intentionally and with awareness.`
+   We don't need a breakthrough. We don't need a new framework, a new paradigm, a new model architecture. We need to look at what we already have. The unexamined default is not worth inheriting. If you check your couch cushions figuratively and literally respective to your domain and cultural furniture, everything and more will be found. The dust bunnies and lint are a as yet to be utilized bioremediation substance.`
 ];
 
 const slideComponents = [
