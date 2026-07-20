@@ -64,6 +64,12 @@ function CartoonSlide() {
           boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
         }}
       />
+     <p style={{
+        color: "#94a3b8", fontSize: 11, fontStyle: "italic",
+        margin: "12px 0 0", textAlign: "center",
+      }}>
+        Illustration generated with Gemini, 17 July 2026.
+      </p>
     </div>
   );
 }
@@ -409,6 +415,11 @@ function ClosingSlide() {
     month     = {October}, year = {2025}, pages = {23030-23040}
 }`}
         </pre>
+         </pre>
+        <p style={{ margin: "12px 0 0" }}>
+          Cartoon illustration generated with Gemini, 17 July 2026. Iterated after an earlier draft rendered the child with three hands. Prompt: " a single pane, print, newspaper style image, bold color of a parent saying to a kid "be grateful for what you have."
+        </p>
+      </div>
       </div>
 
       <div style={{ marginTop: 24, display: "flex", width: "100%", justifyContent: "space-between", alignItems: "flex-end" }}>
