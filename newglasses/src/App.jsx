@@ -452,8 +452,7 @@ const notes = [
 
   // Slide 4: Allocation
   `I want to show you what I mean with one example, and then I want to zoom out.
-
- I want to show you what I mean with one example, and then I want to zoom out.
+  
 This side quest is a branch of a larger project that sprung from my hackles being raised by last semester's final in one of my graduate courses. The technical component training a vision model (VM), a canonical dataset, and a notebook.   From here sprung a diagnostic assay for VM (decoder ring,) and an almost ready front end interactive site to go along with it, and subsequent work such as this. One idea about vision model training concerned Chinese characters and elasticity. In doing initial background research for this, I found out I was not insane, another team was doing something analogous which is great (not being insane, yet).  I began building the framework and protocols for this project.   I settled on a Chinese Bigram, which is a character of two parts. I chose the radical 手丁 (sho˘u and d¯ing).  The context here is so the next bit is not a hard left as we get a bit technical and jargon heavy. When you read “condition A”, and “condition B” I hope you can envision a character either alone or in context as this is all that it refers to.`,
 
   // Slide 5: One small example
