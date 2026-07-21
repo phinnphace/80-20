@@ -67,10 +67,12 @@ function CartoonSlide() {
      <p style={{
         color: "#94a3b8", fontSize: 11, fontStyle: "italic",
         margin: "12px 0 0", textAlign: "center",
-      }}>
-        Illustration generated with Gemini, 17 July 2026.
-      </p>
-    </div>
+      }`}
+        </pre>
+        <p style={{ margin: "12px 0 0" }}>
+          Cartoon illustration generated with Gemini, 17 July 2026. Iterated after an earlier draft rendered the child with three hands. Prompt: "a single pane, print, newspaper-style image, bold color, of a parent saying to a kid 'be grateful for what you have.'"
+        </p>
+      </div>
   );
 }
 
