@@ -56,23 +56,13 @@ function CartoonSlide() {
       display: "flex", flexDirection: "column", alignItems: "center",
       justifyContent: "center", minHeight: 300,
     }}>
-      <img
-        src={cartoonImg}
-        alt="A child reading a toy catalog while a parent points outside and says: Be grateful for what you have."
-        style={{
-          maxWidth: "100%", maxHeight: 400, borderRadius: 4,
-          boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
-        }}
-      />
-     <p style={{
+      <p style={{
         color: "#94a3b8", fontSize: 11, fontStyle: "italic",
         margin: "12px 0 0", textAlign: "center",
-      }`}
-        </pre>
-        <p style={{ margin: "12px 0 0" }}>
-          Cartoon illustration generated with Gemini, 17 July 2026. Iterated after an earlier draft rendered the child with three hands. Prompt: "a single pane, print, newspaper-style image, bold color, of a parent saying to a kid 'be grateful for what you have.'"
-        </p>
-      </div>
+      }}>
+        Illustration generated with Gemini, 2026.
+      </p>
+    </div>
   );
 }
 
