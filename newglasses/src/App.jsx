@@ -56,6 +56,14 @@ function CartoonSlide() {
       display: "flex", flexDirection: "column", alignItems: "center",
       justifyContent: "center", minHeight: 300,
     }}>
+      <img
+        src={cartoonImg}
+        alt="Cartoon: a parent in front of a door, holding a child's hand, saying 'Be grateful for what you have.'"
+        style={{
+          maxWidth: "100%", maxHeight: 400, borderRadius: 4,
+          boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+        }}
+      />
       <p style={{
         color: "#94a3b8", fontSize: 11, fontStyle: "italic",
         margin: "12px 0 0", textAlign: "center",
