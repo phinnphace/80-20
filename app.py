@@ -245,13 +245,13 @@ with tab5:
     relationship (bigrams) produce fundamentally different internal representations than 
     training on isolated characters?
     
-    **Key Finding:** Yes—but the benefit depends on model capacity and pretraining. Contextual 
+    **Key Finding:** Could not determine. I picked the wrong tool for the job. Any "benefit" depends on model capacity and pretraining. Contextual 
     training helps small models trained from scratch (+30 points). With large-scale pretraining 
-    (ResNet-18 on ImageNet), the gap disappears entirely.
+    (ResNet-18 on ImageNet), the gap disappears entirely. Maybe...
     
     **Methodological Contribution:** The confusion matrix structural assay provides a diagnostic 
     for *how* models fail, not just how often. Combined with the split ratio explorer, this 
-    project demonstrates that standard ML defaults (80/20 splits, accuracy-only evaluation) 
+    project demonstrates that standard ML defaults (80/20 splits, internal validation only) 
     can obscure important patterns in model behavior.
     
     **Data:** CASIA Chinese Handwriting Database (HWDB1.1 and HWDB2) via HuggingFace.
