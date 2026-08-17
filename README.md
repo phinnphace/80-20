@@ -12,5 +12,5 @@ CalliBench (Luo et al., 2025) for transfer evaluation
 
 ## Key Finding
 Split ratio changes internal validation by 21+ percentage points. The 80/20 test/train default is an imputed, methodological decision that should be assessed per use case. 
- Its companion Streamlit dashboard can be found here:  https://tinyurl.com/8020ml 
+ The original slide deck dashboard/Vercel  can be found here:(http://go.dataacorns.com/80-20/splits) 
  
